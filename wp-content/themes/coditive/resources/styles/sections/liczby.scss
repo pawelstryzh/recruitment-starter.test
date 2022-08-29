@@ -1,0 +1,69 @@
+.liczby {
+  padding-top: 3.4rem;
+  padding-bottom: 2.875rem;
+  &__holder {
+
+    padding: 2.25rem 0;
+    background: $white;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 40px 50px 20px rgba($text, .05);
+    @media(min-width: 575px) {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+  }
+
+  &__single {
+    grid-column: span 1 / span 1;
+    padding: .875rem 0;
+    @media(min-width: 575px) {
+      border-right: 2px solid $lightGray;
+      padding: 1.875rem 0;
+    }
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  &__single-inner {
+    text-align: center;
+
+    @media(min-width: 767px) {
+      display: flex;
+      text-align: left;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    background: rgba($primary, .09);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    @media(min-width: 767px) {
+      margin-right: 1rem;
+      margin-bottom: 0;
+    }
+    @media(min-width: 1020px) {
+      margin-right: 2.28rem;
+    }
+  }
+
+  &__number {
+    font-size: 1.56rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    line-height: 1.5;
+    font-size: 1.25rem;
+    color: $textGray;
+  }
+}

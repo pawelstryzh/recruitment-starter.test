@@ -1,0 +1,123 @@
+.footer {
+  padding: 4rem 0;
+  background: $footerBg;
+  @media(min-width: 575px) {
+    padding: 11.4rem 0 6.25rem;
+  }
+
+  &__logo {
+    margin-bottom: 1.625rem;
+    display: inline-block;
+  }
+
+  &__text {
+    line-height: 1.88;
+    font-weight: 500;
+    color:$textGray;
+    margin-bottom: 1.875rem;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-link {
+    z-index: 2;
+    position: relative;
+    margin-right: 1.25rem;
+    margin-bottom: 1.875rem;
+    height: 34px;
+    border-radius: 100%;
+    box-shadow: 0px 13px 18px rgba(17, 19, 35, 0.08);
+    &:hover {
+      transform: translateY(-5px);
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      right: 3px;
+      bottom: 5px;
+      background: $primary;
+      border-radius: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__copy {
+    color: $copyGray;
+    line-height: 1.88;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__column {
+    margin-bottom: 3rem;
+    @media(min-width: 1020px) {
+      flex:0 0 340px;
+      max-width: 340px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__menus {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    @media(min-width: 1020px) {
+      flex: 0 0 570px;
+      max-width: 570px;
+    }
+  }
+
+  &__menu-title {
+    margin: 0 0 1.25rem 0;
+    font-weight: 500;
+    color: $text;
+    line-height: 1.67;
+    font-size: 1.125rem;
+  }
+  &__menu {
+    flex:0 0 50%;
+    max-width: 50%;
+    margin-bottom: 2rem;
+    @media(min-width: 575px) {
+      margin-bottom: 0;
+      flex:0 0 auto;
+      max-width: none;
+    }
+  }
+  .menu {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    li {
+      margin-bottom: 0.625rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      color: $textGray;
+      line-height: 1.88;
+      &:hover {
+        color: $text;
+      }
+    }
+  }
+}

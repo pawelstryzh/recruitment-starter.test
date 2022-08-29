@@ -1,0 +1,76 @@
+.hero {
+  padding-top: 2.625rem;
+  padding-bottom: 3rem;
+
+  &__holder {
+    display: flex;
+    flex-direction: column-reverse;
+    @media(min-width: 767px) {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 2.5rem;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__heading {
+    color: $text;
+    line-height: 1.4;
+    margin: 0 0 1.25rem;
+    font-weight: 500;
+    font-size: 2rem;
+    @media(min-width: 1020px) {
+      font-size: 2.5rem;
+    }
+    @media(min-width: 1200px) {
+      font-size: 3.125rem;
+    }
+  }
+
+  &__subtitle {
+    line-height: 1.875;
+    color: $textGray;
+    margin: 0 0 3.125rem;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    display: flex;
+    margin-bottom: 2rem;
+    @media(min-width: 767px) {
+      margin-bottom: 0;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      @media(min-width: 1200px) {
+        max-width: none;
+      }
+    }
+  }
+
+  &__btn {
+    font-weight: 700;
+    line-height: 1.5;
+    color: $text;
+    display: inline-flex;
+    padding: 1rem 4.875rem;
+    background: $primary;
+    text-transform: capitalize;
+    border-radius: 0.625rem;
+    box-shadow: 0 1rem 1.25rem rgba($primary, .3);
+    &:hover {
+      background: darken($primary, 2%);
+      box-shadow: 0 .2rem 1.25rem 0 rgba($primary, .35);
+    }
+  }
+
+}

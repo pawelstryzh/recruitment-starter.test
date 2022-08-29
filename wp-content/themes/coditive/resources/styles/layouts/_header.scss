@@ -1,0 +1,7 @@
+.header {
+  padding: 2rem 0;
+  background: $white;
+  @media(min-width: 767px) {
+    padding: 3.5rem 0;
+  }
+}
